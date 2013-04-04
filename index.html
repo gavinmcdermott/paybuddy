@@ -1,0 +1,73 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+	<h1>PayBuddy</h1>
+  To bill a credit card, simply fill out this form:
+  <form>
+    <label>Bill Description:</label>
+    <input type="text" id="desc" /><br>
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount"><br>
+    
+    <fieldset>
+    	<legend>Credit Card Info</legend>
+    	<label for="number">Number</label>
+    	<input type="text" id="number" name="number">
+    	<span class="number error invisible">Please enter a valid CC.</span><br>
+
+    	<label for="ccv">CCV</label>
+    	<input type="text" id="ccv" name="ccv"><span class="ccv error invisible">CCV should be three digits.</span>
+    	<br>
+    	
+    	<label for="expiration">Expiration Date</label>
+    	<input type="text" id="expiration" name="expiration"><span class="expiration error invisible">Please put in a valid expiration date.</span>
+    	<br>
+    	
+    	<label for="name">Cardholder Name</label>
+    	<input type="text" name="name" id="name"><span class="error invisible name">Please enter a first and last name.</span>
+    </fieldset>
+    
+    <fieldset>
+    	<legend>Billing Address</legend>
+	   		<label for="street">Street Address</label>
+    		<input type="text" name="street" id="street">
+    		<br>
+    		<label for="city">City</label>
+    		<input type="text" name="city" id="city">
+    		<label for="state">State:</label>
+    		<input type="text" name="state" id="state">
+    		<br>
+    		<label for="zip">Zip Code:</label>
+    		<input type="text" name="zip" id="zip">
+    		<br>
+    </fieldset>
+    
+    <hr>
+    
+    <input type="radio" name="billing" id="one">
+    <label for="one">One time billing</label>gg
+    <input type="radio" name="billing" id="monthly">
+    <label for="monthly">Monthly billing</label>
+    <input type="radio" name="billing" id="annual">
+    <label for="annual">Annual billing</label><br><hr>
+
+    <span>Do you want the recipient to receive an email reciept?</span>
+    <input type="radio" name="email-reciept" id="yes">
+    <label for="yes">Yes</label>
+    <input type="radio" name="email-reciept" id="no" checked>
+    <label for="no">No</label><br>
+
+    <div class="recipient-email invisible">
+    	<label for="recipient">Their e-mail address:</label><input type="text" name="recipient" id="recipient">
+    </div>
+
+    <input type="submit" />
+
+    <span class="success-message invisible">Your form was submitted!</span>
+  </form>
+</body>
+</html>

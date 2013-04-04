@@ -1,0 +1,19 @@
+body {
+  /* rules go here */
+}
+
+.invisible {
+	display: none;
+}
+
+fieldset .error {
+	color: red;
+}
+
+input#state {
+	width: 2em;
+}
+
+label[for="state"] {
+	margin-left: 40px;
+}
